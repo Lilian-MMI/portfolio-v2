@@ -1,0 +1,84 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lilian Ouvrard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/menu.js" defer></script>
+</head>
+
+<body>
+
+    <!-- background vertical line -->
+    <div class="bg_section">
+        <div class="bg_white_vertical_line"></div>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+    </div>
+    <!--  -->
+
+    <!-- menu -->
+        <div id="bg_menu" class="d_none">
+            <div class="bg_menu_text">
+                <p>menu</p>
+            </div>
+            <a id="home_option"
+                class="bg_link_option vertical_divider active_hover"
+                href="index.html">
+                <span class="myx_auto">accueil</span>
+            </a>
+            <a id="about_option" class="bg_link_option vertical_divider"
+                href="profil.html">
+                <span class="myx_auto">à propos</span>
+            </a>
+            <a id="projects_option" class="bg_link_option vertical_divider"
+                href="projets.html">
+                <span class="myx_auto">projets</span>
+            </a>
+            <a id="contact_option" class="bg_link_option vertical_divider"
+                href="contact.html">
+                <span class="myx_auto">contact</span>
+            </a>
+            <div id="bg_menu_selected" class="bg_option_selected"></div>
+        </div>
+    <!--  -->
+
+    <!-- menu transition -->
+    <div id="transition_menu">
+        <div class="transition_color"></div>
+        <div class="transition_color transition_color_2"></div>
+    </div>
+    <!--  -->
+    
+    <div class="content">
+
+        <!-- header -->
+        <div class="header">
+            <div>
+                <a href="./index.html"><img class="logo" src="./images/logo.svg" alt="logo"></a>
+                <div id="menu_icon">
+                    <a class="menu">
+                        <div class="line_1"></div>
+                        <div class="line_2"></div>
+                        <div class="line_3"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

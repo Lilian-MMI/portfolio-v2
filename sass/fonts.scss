@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "Proxima Nova Bl";
+    src: url("ProximaNova-Black.eot");
+    src: local("Proxima Nova Black"), local("ProximaNova-Black"), url("fonts/ProximaNova-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Th";
+    src: url("ProximaNova-Extrabld.eot");
+    src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("fonts/ProximaNova-Extrabld.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Lt";
+    src: url("ProximaNova-SemiboldIt.eot");
+    src: local("Proxima Nova Semibold Italic"), local("ProximaNova-SemiboldIt"), url("fonts/ProximaNova-SemiboldIt.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Th";
+    src: url("ProximaNovaT-Thin.eot");
+    src: local("Proxima Nova Thin"), local("ProximaNovaT-Thin"), url("fonts/ProximaNovaT-Thin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Lt";
+    src: url("ProximaNova-Light.eot");
+    src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("fonts/ProximaNova-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Bl";
+    src: url("ProximaNova-BlackIt.eot");
+    src: local("Proxima Nova Black Italic"), local("ProximaNova-BlackIt"), url("fonts/ProximaNova-BlackIt.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("ProximaNova-BoldIt.eot");
+    src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("fonts/ProximaNova-BoldIt.woff2") format("woff2");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Th";
+    src: url("ProximaNova-ThinIt.eot");
+    src: local("Proxima Nova Thin Italic"), local("ProximaNova-ThinIt"), url("fonts/ProximaNova-ThinIt.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("ProximaNova-Bold.eot");
+    src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("fonts/ProximaNova-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("ProximaNova-RegularIt.eot");
+    src: local("Proxima Nova Regular Italic"), local("ProximaNova-RegularIt"), url("fonts/ProximaNova-RegularIt.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Th";
+    src: url("ProximaNova-ExtrabldIt.eot");
+    src: local("Proxima Nova Extrabold Italic"), local("ProximaNova-ExtrabldIt"), url("fonts/ProximaNova-ExtrabldIt.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Rg";
+    src: url("ProximaNova-Regular.eot");
+    src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("fonts/ProximaNova-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Proxima Nova Lt";
+    src: url("ProximaNova-LightIt.eot");
+    src: local("Proxima Nova Light Italic"), local("ProximaNova-LightIt"), url("fonts/ProximaNova-LightIt.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Proxima Nova Lt";
+    src: url("ProximaNova-Semibold.eot");
+    src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("fonts/ProximaNova-Semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Regular";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Regular"), url("DomaineDispNar-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Regular Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Regular Italic"), url("DomaineDispNar-RegularItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Medium";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Medium"), url("DomaineDispNar-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Medium Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Medium Italic"), url("DomaineDispNar-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Semibold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Semibold"), url("DomaineDispNar-Semibold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Semibold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Semibold Italic"), url("DomaineDispNar-SemiboldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Bold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Bold"), url("DomaineDispNar-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Bold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Bold Italic"), url("DomaineDispNar-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Extrabold";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Extrabold"), url("DomaineDispNar-Extrabold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Extrabold Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Extrabold Italic"), url("DomaineDispNar-ExtraboldItalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Black";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Black"), url("fonts/DomaineDispNar-Black.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Domaine Display Narrow Black Italic";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Domaine Display Narrow Black Italic"), url("DomaineDispNar-BlackItalic.woff") format("woff");
+}

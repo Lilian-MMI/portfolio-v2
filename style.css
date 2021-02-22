@@ -1,0 +1,963 @@
+@font-face {
+  font-family: "Proxima Nova Bl";
+  src: url("ProximaNova-Black.eot");
+  src: local("Proxima Nova Black"), local("ProximaNova-Black"), url("fonts/ProximaNova-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Th";
+  src: url("ProximaNova-Extrabld.eot");
+  src: local("Proxima Nova Extrabold"), local("ProximaNova-Extrabld"), url("fonts/ProximaNova-Extrabld.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Lt";
+  src: url("ProximaNova-SemiboldIt.eot");
+  src: local("Proxima Nova Semibold Italic"), local("ProximaNova-SemiboldIt"), url("fonts/ProximaNova-SemiboldIt.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Th";
+  src: url("ProximaNovaT-Thin.eot");
+  src: local("Proxima Nova Thin"), local("ProximaNovaT-Thin"), url("fonts/ProximaNovaT-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Lt";
+  src: url("ProximaNova-Light.eot");
+  src: local("Proxima Nova Light"), local("ProximaNova-Light"), url("fonts/ProximaNova-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Bl";
+  src: url("ProximaNova-BlackIt.eot");
+  src: local("Proxima Nova Black Italic"), local("ProximaNova-BlackIt"), url("fonts/ProximaNova-BlackIt.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("ProximaNova-BoldIt.eot");
+  src: local("Proxima Nova Bold Italic"), local("ProximaNova-BoldIt"), url("fonts/ProximaNova-BoldIt.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Th";
+  src: url("ProximaNova-ThinIt.eot");
+  src: local("Proxima Nova Thin Italic"), local("ProximaNova-ThinIt"), url("fonts/ProximaNova-ThinIt.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("ProximaNova-Bold.eot");
+  src: local("Proxima Nova Bold"), local("ProximaNova-Bold"), url("fonts/ProximaNova-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("ProximaNova-RegularIt.eot");
+  src: local("Proxima Nova Regular Italic"), local("ProximaNova-RegularIt"), url("fonts/ProximaNova-RegularIt.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Th";
+  src: url("ProximaNova-ExtrabldIt.eot");
+  src: local("Proxima Nova Extrabold Italic"), local("ProximaNova-ExtrabldIt"), url("fonts/ProximaNova-ExtrabldIt.woff2") format("woff2");
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Rg";
+  src: url("ProximaNova-Regular.eot");
+  src: local("Proxima Nova Regular"), local("ProximaNova-Regular"), url("fonts/ProximaNova-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Lt";
+  src: url("ProximaNova-LightIt.eot");
+  src: local("Proxima Nova Light Italic"), local("ProximaNova-LightIt"), url("fonts/ProximaNova-LightIt.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Proxima Nova Lt";
+  src: url("ProximaNova-Semibold.eot");
+  src: local("Proxima Nova Semibold"), local("ProximaNova-Semibold"), url("fonts/ProximaNova-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Domaine Display Narrow Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Regular"), url("DomaineDispNar-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Regular Italic"), url("DomaineDispNar-RegularItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Medium"), url("DomaineDispNar-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Medium Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Medium Italic"), url("DomaineDispNar-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Semibold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Semibold"), url("DomaineDispNar-Semibold.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Semibold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Semibold Italic"), url("DomaineDispNar-SemiboldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Bold"), url("DomaineDispNar-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Bold Italic"), url("DomaineDispNar-BoldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Extrabold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Extrabold"), url("DomaineDispNar-Extrabold.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Extrabold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Extrabold Italic"), url("DomaineDispNar-ExtraboldItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Black"), url("fonts/DomaineDispNar-Black.woff") format("woff");
+}
+@font-face {
+  font-family: "Domaine Display Narrow Black Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Domaine Display Narrow Black Italic"), url("DomaineDispNar-BlackItalic.woff") format("woff");
+}
+@keyframes cursorEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes cursorEffect {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hover_arrow {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 5px;
+  }
+}
+@-webkit-keyframes hover_arrow {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 5px;
+  }
+}
+@keyframes white_line_bg_bolt {
+  0% {
+    height: 100px;
+    left: 12.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  2% {
+    height: 100px;
+    left: 12.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  4% {
+    height: 100px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  5% {
+    height: 100px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  6% {
+    height: 200px;
+    left: 37.5%;
+    top: -200px;
+    opacity: 0;
+  }
+  12% {
+    height: 200px;
+    left: 37.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  13% {
+    height: 200px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  14% {
+    height: 200px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  15% {
+    height: 100px;
+    left: 87.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  25% {
+    height: 100px;
+    left: 87.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  26% {
+    height: 100px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  27% {
+    height: 100px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  28% {
+    height: 200px;
+    left: 50%;
+    top: -200px;
+    opacity: 0;
+  }
+  45% {
+    height: 200px;
+    left: 50%;
+    top: -200px;
+    opacity: 1;
+  }
+  46% {
+    height: 200px;
+    left: 50%;
+    top: 100vh;
+    opacity: 1;
+  }
+  47% {
+    height: 200px;
+    left: 50%;
+    top: 100vh;
+    opacity: 0;
+  }
+  48% {
+    height: 200px;
+    left: 87.5%;
+    top: -200vh;
+    opacity: 0;
+  }
+  62% {
+    height: 200px;
+    left: 87.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  63% {
+    height: 200px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  64% {
+    height: 200px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  65% {
+    height: 100px;
+    left: 37.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  80% {
+    height: 100px;
+    left: 37.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  81% {
+    height: 100px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  82% {
+    height: 100px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  83% {
+    height: 200px;
+    left: 12.5%;
+    top: -200px;
+    opacity: 0;
+  }
+  90% {
+    height: 200px;
+    left: 12.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  91% {
+    height: 200px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  92% {
+    height: 200px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  93% {
+    height: 100px;
+    left: 50%;
+    top: -100px;
+    opacity: 0;
+  }
+  94% {
+    height: 100px;
+    left: 50%;
+    top: -100px;
+    opacity: 1;
+  }
+  95% {
+    height: 100px;
+    left: 50%;
+    top: 100vh;
+    opacity: 1;
+  }
+  to {
+    height: 100px;
+    left: 50%;
+    top: 100vh;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes white_line_bg_bolt {
+  0% {
+    height: 100px;
+    left: 12.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  2% {
+    height: 100px;
+    left: 12.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  4% {
+    height: 100px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  5% {
+    height: 100px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  6% {
+    height: 200px;
+    left: 37.5%;
+    top: -200px;
+    opacity: 0;
+  }
+  12% {
+    height: 200px;
+    left: 37.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  13% {
+    height: 200px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  14% {
+    height: 200px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  15% {
+    height: 100px;
+    left: 87.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  25% {
+    height: 100px;
+    left: 87.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  26% {
+    height: 100px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  27% {
+    height: 100px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  28% {
+    height: 200px;
+    left: 50%;
+    top: -200px;
+    opacity: 0;
+  }
+  45% {
+    height: 200px;
+    left: 50%;
+    top: -200px;
+    opacity: 1;
+  }
+  46% {
+    height: 200px;
+    left: 50%;
+    top: 100vh;
+    opacity: 1;
+  }
+  47% {
+    height: 200px;
+    left: 50%;
+    top: 100vh;
+    opacity: 0;
+  }
+  48% {
+    height: 200px;
+    left: 87.5%;
+    top: -200vh;
+    opacity: 0;
+  }
+  62% {
+    height: 200px;
+    left: 87.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  63% {
+    height: 200px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  64% {
+    height: 200px;
+    left: 87.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  65% {
+    height: 100px;
+    left: 37.5%;
+    top: -100px;
+    opacity: 0;
+  }
+  80% {
+    height: 100px;
+    left: 37.5%;
+    top: -100px;
+    opacity: 1;
+  }
+  81% {
+    height: 100px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  82% {
+    height: 100px;
+    left: 37.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  83% {
+    height: 200px;
+    left: 12.5%;
+    top: -200px;
+    opacity: 0;
+  }
+  90% {
+    height: 200px;
+    left: 12.5%;
+    top: -200px;
+    opacity: 1;
+  }
+  91% {
+    height: 200px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 1;
+  }
+  92% {
+    height: 200px;
+    left: 12.5%;
+    top: 100vh;
+    opacity: 0;
+  }
+  93% {
+    height: 100px;
+    left: 50%;
+    top: -100px;
+    opacity: 0;
+  }
+  94% {
+    height: 100px;
+    left: 50%;
+    top: -100px;
+    opacity: 1;
+  }
+  95% {
+    height: 100px;
+    left: 50%;
+    top: 100vh;
+    opacity: 1;
+  }
+  to {
+    height: 100px;
+    left: 50%;
+    top: 100vh;
+    opacity: 0;
+  }
+}
+/* Breakpoints */
+/* Media Queries */
+/* Font-Size */
+/* Line-Height */
+/* Variables */
+:root {
+  --main-color: #171717;
+  --seconday-color: #5ae1b4;
+}
+
+/* General */
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  margin: 0;
+  position: relative;
+  font-size: 1em;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+@media (min-width: 64rem) {
+  body,
+html {
+    font-size: 1.2em;
+    line-height: 1.8;
+  }
+}
+@media (min-width: 85.375rem) {
+  body,
+html {
+    font-size: 1.3em;
+  }
+}
+@media (min-width: 120rem) {
+  body,
+html {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 160rem) {
+  body,
+html {
+    font-size: 1.6em;
+  }
+}
+
+.d_none {
+  display: none !important;
+}
+
+.d_flex {
+  display: flex !important;
+}
+
+.myx_auto {
+  margin: auto;
+}
+
+/* Background */
+.bg_section {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow-y: hidden;
+}
+
+.bg_white_vertical_line {
+  position: absolute;
+  top: -100px;
+  width: 1px;
+  height: 100px;
+  background-color: #969696;
+  animation: white_line_bg_bolt 30s linear infinite forwards;
+  -webkit-animation: white_line_bg_bolt 30s linear infinite forwards;
+}
+
+.bg_vertical_line {
+  width: 12.5%;
+  height: 100%;
+  border-right: solid 0.5px #53535333;
+}
+
+/* Background menu */
+#bg_menu {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.bg_menu_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.bg_menu_text p {
+  font-family: "Domaine Display Narrow Black";
+  text-transform: uppercase;
+  color: #242424b8;
+  font-size: 14rem;
+  letter-spacing: 0.2em;
+  transform: translateX(0.08em);
+  -webkit-transform: translateX(0.08em);
+  -moz-transform: translateX(0.08em);
+  -ms-transform: translateX(0.08em);
+  -o-transform: translateX(0.08em);
+}
+
+.bg_link_option {
+  display: flex;
+  font-family: "Proxima Nova Bl";
+  font-size: 1.5em;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  overflow: hidden;
+  background-image: linear-gradient(to right, white, white 50%, #7d7b80 50%);
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+.bg_link_option:hover {
+  white-space: nowrap;
+  transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  background-position: 0%;
+  -webkit-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  -moz-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  -ms-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  -o-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+}
+.bg_link_option::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  top: 50%;
+  margin-top: 0;
+  right: 1px;
+  background: var(--seconday-color);
+  transform: translate3d(-100%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  -webkit-transition: transform 0.4s;
+  -moz-transition: transform 0.4s;
+  -ms-transition: transform 0.4s;
+  -o-transition: transform 0.4s;
+}
+.bg_link_option:hover::after {
+  transform: translate3d(110%, 0, 0);
+  -webkit-transform: translate3d(110%, 0, 0);
+  -moz-transform: translate3d(110%, 0, 0);
+  -ms-transform: translate3d(110%, 0, 0);
+  -o-transform: translate3d(110%, 0, 0);
+}
+.bg_link_option:hover::before {
+  width: 100%;
+}
+
+.vertical_divider {
+  z-index: 2;
+  position: relative;
+  width: 25%;
+  height: 100%;
+  border-right: solid 0.5px #535353;
+}
+
+.vertical_divider:last-of-type {
+  border-right: none !important;
+}
+
+.active_hover_about {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+}
+
+.active_hover_projects {
+  -webkit-transform: translate3d(200%, 0, 0);
+  transform: translate3d(200%, 0, 0);
+  -moz-transform: translate3d(200%, 0, 0);
+  -ms-transform: translate3d(200%, 0, 0);
+  -o-transform: translate3d(200%, 0, 0);
+}
+
+.active_hover_contact {
+  -webkit-transform: translate3d(300%, 0, 0);
+  transform: translate3d(300%, 0, 0);
+  -moz-transform: translate3d(300%, 0, 0);
+  -ms-transform: translate3d(300%, 0, 0);
+  -o-transform: translate3d(300%, 0, 0);
+}
+
+.bg_option_selected {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+}
+
+#bg_menu_selected {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 25%;
+  margin: 0 0 0;
+  background: #111;
+  box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+}
+
+/* Background menu transition */
+#transition_menu {
+  z-index: 2;
+}
+
+.transition_color {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  bottom: auto;
+  background: var(--seconday-color);
+  z-index: 2;
+  -webkit-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -moz-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -ms-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -o-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+}
+.transition_color.active {
+  right: 100%;
+}
+
+.transition_color_2 {
+  background: #222222;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* Content */
+.content {
+  max-width: 85.375rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 6rem;
+  z-index: 2;
+}
+.header > div {
+  margin: auto 3rem;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header a {
+  margin: auto 0;
+}
+.header a > .logo {
+  width: 50px;
+}
+
+/* Menu icon */
+.menu {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0;
+  position: relative;
+}
+.menu div {
+  width: 35px;
+  height: 3px;
+  margin-bottom: 4px;
+  background-color: #dcdcdc;
+  position: relative;
+  -webkit-transition: 0.4s all ease;
+  -o-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  -moz-transition: 0.4s all ease;
+  -ms-transition: 0.4s all ease;
+}
+.menu div:last-child {
+  width: 22px;
+  margin-left: auto;
+}
+.menu:hover div.line_1 {
+  width: 30px;
+  -webkit-transform: translateY(6px) rotate(90deg);
+  transform: translateY(6px) rotate(90deg);
+  -moz-transform: translateY(6px) rotate(90deg);
+  -ms-transform: translateY(6px) rotate(90deg);
+  -o-transform: translateY(6px) rotate(90deg);
+}
+.menu:hover div.line_2 {
+  width: 30px;
+}
+.menu:hover div.line_3 {
+  width: 0;
+}
+
+.hover_line_1 {
+  transform: translate(0, 7px) rotate(135deg);
+  -webkit-transform: translate(0, 7px) rotate(135deg);
+  -moz-transform: translate(0, 7px) rotate(135deg);
+  -ms-transform: translate(0, 7px) rotate(135deg);
+  -o-transform: translate(0, 7px) rotate(135deg);
+}
+
+.hover_line_2 {
+  transform: rotate(45deg);
+  width: 30px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.menu:hover .hover_line_1 {
+  width: 35px !important;
+  transform: translate(0, 7px) rotate(135deg) !important;
+  -webkit-transform: translate(0, 7px) rotate(135deg) !important;
+  -moz-transform: translate(0, 7px) rotate(135deg) !important;
+  -ms-transform: translate(0, 7px) rotate(135deg) !important;
+  -o-transform: translate(0, 7px) rotate(135deg) !important;
+}
+.menu:hover .hover_line_2 {
+  width: 35px !important;
+}
+
+/*# sourceMappingURL=style.css.map */
