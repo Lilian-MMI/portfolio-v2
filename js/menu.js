@@ -1,53 +1,43 @@
-const menu_transition = document.getElementById("menu_icon");
-let layers = document.getElementsByClassName("transition_color");
+/* Display menu &transition */
+const toggleDisplayMenu = () => {
+    document.querySelector('.line_1').classList.toggle('hover_line_1');
+    document.querySelector('.line_2').classList.toggle('hover_line_2');
+    document.querySelector('.line_3').classList.toggle('d_none');
 
-menu_transition.addEventListener('click', () => {
     setTimeout(function () {
-        document.getElementById("bg_menu").classList.toggle('d_none');
-    }, 400);
+        document.querySelector('#bg_menu').classList.toggle('d_none');
+    }, 500);
+}
+
+const slideMenuTransition = () => {
+    let layers = document.querySelectorAll('.transition_color');
     for (let layer of layers) {
-        layer.classList.toggle("active");
+        layer.classList.toggle('active');
     }
+}
+
+/* Event listener */
+let menu_transition = document.querySelector('#menu_icon');
+menu_transition.addEventListener('click', () => { 
+    toggleDisplayMenu(),
+    slideMenuTransition()
 });
 
-$('#menu_icon').click(function () {
-    $('.line_1').toggleClass('hover_line_1'),
-    $('.line_2').toggleClass('hover_line_2'),
-    $('.line_3').toggleClass('d_none');
-    setTimeout(
-        function () {
-            $('#background_menu').toggleClass('d_flex')
-        }, 500);
-});
+/* Hover transition on menu option */
+let bg_menu_selected = document.querySelector('#bg_menu_selected');
+let home_option = document.querySelector('#home_option');
+let about_option = document.querySelector('#about_option');
+let projects_option = document.querySelector('#projects_option');
+let contact_option = document.querySelector('#contact_option');
 
-$('#home_option')
-    .mouseenter(function () {
-        $('#bg_menu_selected').addClass('bg_option_selected')
-    })
-    .mouseleave(function () {
-        $('#bg_menu_selected').removeClass()
-    });
+home_option.addEventListener('mouseenter', () => bg_menu_selected.classList.add('bg_option_selected'));
+home_option.addEventListener('mouseleave', () => bg_menu_selected.classList.remove('bg_option_selected'));
 
-$('#about_option')
-    .mouseenter(function () {
-        $('#bg_menu_selected').addClass('active_hover_about')
-    })
-    .mouseleave(function () {
-        $('#bg_menu_selected').removeClass()
-    });
+about_option.addEventListener('mouseenter', () => bg_menu_selected.classList.add('active_hover_about'));
+about_option.addEventListener('mouseleave', () => bg_menu_selected.classList.remove('active_hover_about'));
 
-$('#projects_option')
-    .mouseenter(function () {
-        $('#bg_menu_selected').addClass('active_hover_projects')
-    })
-    .mouseleave(function () {
-        $('#bg_menu_selected').removeClass()
-    });
+projects_option.addEventListener('mouseenter', () => bg_menu_selected.classList.add('active_hover_projects'));
+projects_option.addEventListener('mouseleave', () => bg_menu_selected.classList.remove('active_hover_projects'));
 
-$('#contact_option')
-    .mouseenter(function () {
-        $('#bg_menu_selected').addClass('active_hover_contact')
-    })
-    .mouseleave(function () {
-        $('#bg_menu_selected').removeClass()
-    });
+contact_option.addEventListener('mouseenter', () => bg_menu_selected.classList.add('active_hover_contact'));
+contact_option.addEventListener('mouseleave', () => bg_menu_selected.classList.remove('active_hover_contact'));
