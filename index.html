@@ -8,7 +8,9 @@
     <script src="./js/typewritting.js" defer></script>
     <script src="./js/menu.js" defer></script>
     <script src="./js/barba.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src="./js/fontawesome.min.js" defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/@barba/core'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js'></script>
 </head>
 
 <body data-barba="wrapper">
@@ -70,42 +72,51 @@
         </div>
         <!--  -->
 
-        <!--  -->
+        <!-- home content -->
         <section data-barba="container" data-barba-namespace="slide-menu" data-background="#161636">
             <main>
                 <div class="home_left_section">
-                    <p id="typewritter_text"></p><span class="typewritter_underscore"></span>
-
-                    <!-- <div class="p-0 flex-column" style="z-index: 2; width: 100%;">
-                        <div class="d-flex presentation_phrase_accueil_top"></div>
-                        <p class="presentation_phrase_accueil">Hey. Moi c'est Lilian</p>
-                        <p class="presentation_phrase_accueil_bottom">
-                            Ravie de vous voir ici, sur mon portfolio !
-                            <br>
-                            Je vous laisse visiter, n'hesitez pas à me contacter.
-                        </p>
-                        <a href="profil.html">
-                            <p class="link_real_index">Consulter mon profil
-                                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-arrow-right-short"
-                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z" />
-                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H4.5A.5.5 0 0 1 4 8z" />
-                                </svg>
-                            </p>
-                        </a>
-                    </div> -->
-
-
+                    <div>
+                        <div class="d_flex">
+                            <p id="typewritter_text"></p><span class="typewritter_underscore"></span>
+                        </div>
+                        <h1 class="home_presentation">Hey. Moi c'est Lilian</h1>
+                        <p class="home_description">Ravie de vous voir ici, sur mon portfolio !<br>Je vous laisse visiter, n'hesitez pas à me contacter.</p>
+                        <a class="main_link" href="./about.html">Consulter mon profil<i class="fad fa-long-arrow-right"></i></a>
+                    </div>
                 </div>
-                <div class="home_right_section">
 
+                <div class="home_right_section">
+                    <div class="home_parallax" id="parallax">
+                        <div class="div_element_parallax" data-depth-x="0" data-depth-y="0">
+                            <div class="img_element_parallax"></div>
+                        </div>
+                        <div class="div_element_parallax" data-depth-x="0.2" data-depth-y="0.2">
+                            <div class="img_element_parallax"></div>
+                        </div>
+                        <div class="div_element_parallax" data-depth-x="0.35" data-depth-y="0.35">
+                            <div class="img_element_parallax"></div>
+                        </div>
+                        <div class="div_element_parallax" data-depth-x="0.6" data-depth-y="0.7">
+                            <div class="img_element_parallax"></div>
+                        </div>
+                        <div class="div_element_parallax" data-depth-x="0.3" data-depth-y="0.3">
+                            <div class="img_element_parallax"></div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </section>
         <!--  -->
 
     </div>
+
+    <!-- Enable parallax effect -->
+    <script>
+        let scene = document.querySelector('#parallax');
+        let parallax = new Parallax(scene);
+    </script>
+    <!--  -->
 
 </body>
 
