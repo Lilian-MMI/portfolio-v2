@@ -34,4 +34,10 @@ barba.init({
             slideMenuTransition() */
         }
     }],
+    views: [{
+        namespace: 'slide-menu',
+        afterEnter() {
+            typewritting();
+        }
+    }]
 });

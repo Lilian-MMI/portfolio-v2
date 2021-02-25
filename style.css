@@ -935,7 +935,7 @@ html {
 /* Header */
 .header {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 6rem;
   z-index: 2;
@@ -1060,6 +1060,27 @@ html {
   .menu:hover .hover_line_2 {
     width: 35px !important;
   }
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.home_left_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.home_left_section > * {
+  margin: auto;
+}
+
+.home_right_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */
