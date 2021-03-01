@@ -1,6 +1,6 @@
 const typewritting = () => {
 
-    let SENTENCES_TYPEWRITTER = ["Front-end", "Experience utilisateur", "Frameworks", "Interaction utililsateur", "Back-end", "Search engine optimisation"];
+    let SENTENCES_TYPEWRITTER = ["Search engine optimisation"];
     let typewritter_text = document.querySelector("#typewritter_text");
 
     let delay = ms => new Promise(resolve => setTimeout(resolve, ms));
