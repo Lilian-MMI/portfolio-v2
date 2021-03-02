@@ -113,8 +113,12 @@
 
     <!-- Enable parallax effect -->
     <script>
-        let scene = document.querySelector('#parallax');
-        let parallax = new Parallax(scene);
+        const startParallax = () => {
+            let scene = document.querySelector('#parallax');
+            let parallax = new Parallax(scene);
+        }
+
+        startParallax()
     </script>
     <!--  -->
 

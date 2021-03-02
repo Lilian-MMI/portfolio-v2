@@ -74,7 +74,7 @@
 
         <!--  -->
         <section data-barba="container" data-barba-namespace="slide-menu" data-background="#161636">
-            <main>
+            <main class="flex-column">
                 <div class="about_content">
                     <div class="about_left_section about_title">
                         à propos
@@ -85,7 +85,7 @@
                         j'étudie actuellement en 3e année à Ynov Informatique de Nantes et élabore de nouveaux sites web pour le groupe 
                         <b>dl&#8239;sante</b> en parallèle de mes études.</p>
                         <br>
-                        <a class="main_link" href="./about.html">consulter mon cv <i class="fad fa-long-arrow-right"></i></a>
+                        <a class="main_link prevent" target="_blank" href="https://drive.google.com/file/d/1nFRufq-LQNzF7V2jAKy9OqUDqUPouR2s/view?usp=sharing">consulter mon cv <i class="fad fa-long-arrow-right"></i></a>
                         <div class="about_grid">
                             <div class="about_grid_1">
                                 <h3><i class="fad fa-bring-forward fa-sm"></i></i>Front-end</h3>
@@ -114,12 +114,60 @@
                         </div>
                     </div>
                 </div>
+                <div class="about_content">
+                    <div class="wrapper" id="js-wrapper">
+                        <div class="sections" id="js-slideContainer">
+                            <section class="section">
+                                <span class="section__title" id="title1">Section One</span>
+                          <span id="trigger--title1"></span>
+                            </section>
+                        </div>
+                      <div class="scroll-progress" style="width:0%; height:5px; background:#0090c6; position:fixed; bottom:0; left:0; z-index:9999"></div>
+                    </div>
+                </div>
             </main>
         </section>
         <!--  -->
 
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script defer>
+        $(function () { // wait for document ready
+        
+        var controller = new ScrollMagic.Controller();
 
+        var horizontalSlide = new TimelineMax()
+        // animate panels
+        .to("#js-slideContainer", 1,   {x: "-20%"})	
+        .to("#js-slideContainer", 1,   {x: "-40%"})
+        .to("#js-slideContainer", 1,   {x: "-60%"})
+        .to("#js-slideContainer", 1,   {x: "-80%"})
+
+
+        // create scene to pin and link animation
+        new ScrollMagic.Scene({
+            triggerElement: "#js-wrapper",
+            triggerHook: "onLeave",
+            duration: "400%"
+        })
+            .setPin("#js-wrapper")
+            .setTween(horizontalSlide)
+            .on("progress", function(e) {
+                var progressvalue = Math.floor(100 * e.progress);
+                $('.scroll-progress').css('width', progressvalue + "%");
+            })
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+        
+        
+        
+        });
+    </script>
 </body>
 
 </html>

@@ -658,6 +658,10 @@ html {
   display: flex !important;
 }
 
+.flex-column {
+  flex-direction: column !important;
+}
+
 .myx_auto {
   margin: auto;
 }
@@ -1234,13 +1238,16 @@ main {
 }
 
 .about_content {
-  width: 100%;
-  margin: 12rem 3rem;
+  margin: 0rem 3rem;
 }
 @media (min-width: 64rem) {
   .about_content {
     display: flex;
   }
+}
+
+.about_content:first-child {
+  margin: 12rem 3rem;
 }
 
 .about_title {
@@ -1333,6 +1340,33 @@ main {
 
 .about_grid6 {
   grid-area: 3/1/5/2;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1000;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+  float: left;
+  background: #F64747;
+  position: relative;
+}
+.sections {
+  width: 100%;
+  height: 100%;
+}
+.section__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
