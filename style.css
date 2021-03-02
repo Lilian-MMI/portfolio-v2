@@ -1236,7 +1236,11 @@ main {
 .about_content {
   width: 100%;
   margin: 12rem 3rem;
-  display: flex;
+}
+@media (min-width: 64rem) {
+  .about_content {
+    display: flex;
+  }
 }
 
 .about_title {
@@ -1251,37 +1255,60 @@ main {
 }
 
 .about_right_section {
-  width: 65%;
+  width: 100%;
   color: #8b8b8b;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Proxima Nova Rg";
   font-weight: 200;
   margin-top: 0.8rem;
+}
+@media (min-width: 64rem) {
+  .about_right_section {
+    width: 65%;
+  }
+}
+.about_right_section > p {
+  width: 65%;
+}
+@media (max-width: 36rem) {
+  .about_right_section > p {
+    width: 100%;
+  }
+}
+@media (min-width: 64rem) {
+  .about_right_section > p {
+    width: 100%;
+  }
 }
 .about_right_section h3 {
   color: var(--white-text-color);
   font-family: "Domaine Display Narrow Black";
   font-size: 1.2rem;
   margin: 0;
-  position: relative;
 }
 .about_right_section h3 i {
-  position: absolute;
-  left: -15px;
-  top: 2px;
+  width: 1.5rem;
 }
 
 .about_description_text {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .about_grid {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+}
+@media (max-width: 36rem) {
+  .about_grid {
+    display: block;
+  }
+  .about_grid > div:not(:first-child) {
+    margin-top: 1.5rem;
+  }
 }
 
 .about_grid1 {
