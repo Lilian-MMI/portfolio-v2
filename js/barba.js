@@ -35,7 +35,7 @@ barba.init({
         }
     }],
     views: [{
-        namespace: 'slide-menu',
+        namespace: 'slide-index',
         afterEnter() {
             startParallax()
             typewritting();
