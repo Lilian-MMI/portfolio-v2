@@ -19,7 +19,7 @@
 <body data-barba="wrapper">
     <!-- background vertical line -->
     <div class="bg_section">
-        <div class="bg_white_vertical_line"></div>
+        <div class="bg_white_vertical_line about"></div>
         <span class="bg_vertical_line"></span>
         <span class="bg_vertical_line"></span>
         <span class="bg_vertical_line"></span>
@@ -118,17 +118,85 @@
                     </div>
                 </div>
                 <div class="about_content_parcours">
-                    <div class="about_left_section about_title">
-                        parcours
-                    </div>
-                    <div class="about_right_section">
-                        <div id='horizontal_container'>
-                            <div>Horizontal &rarr;</div>
+                    <div id='horizontal_container'>
+                        <p class="horizontal_container_title">parcours</p>
+                        <div class="horizontal_container_content">
+                            <!-- Background text -->
+                            <span class="horizontal_container_bg_text">expériences</span>
+                            <!-- Progress bar horizontal scroll -->
+                            <div class="line_progress_parcours">
+                                <div class="entire_line"></div>
+                                <div id="complete_line"></div>
+                            </div>
+                            <!-- content -->
+                            <div class="horizontal_container_carreer">
+                                <div class="progress_step">
+                                    <div>
+                                        <h3 class="step_title">Lycée Jacques de Vaucanson, Tours</h3>
+                                        <h3 class="step_under_title">- BAC S</h3>
+                                        <p class="step_description">En derniere année, je me suis tourné
+                                            vers l'option ISN, afin de
+                                            mes compléter mes connaissances en programmation, et
+                                            particulièrement en langage Python.
+                                        </p>
+                                        <p class="step_year">2015 - 2018</p>
+                                    </div>
+                                </div>
+                                <div class="progress_step">
+                                    <div>
+                                        <h3 class="step_title">Lycée Jacques de Vaucanson, Tours</h3>
+                                        <h3 class="step_under_title">- BAC S</h3>
+                                        <p class="step_description">En derniere année, je me suis tourné
+                                            vers l'option ISN, afin de
+                                            mes compléter mes connaissances en programmation, et
+                                            particulièrement en langage Python.
+                                        </p>
+                                        <p class="step_year">2015 - 2018</p>
+                                    </div>
+                                </div>
+                                <div class="progress_step">
+                                    <div>
+                                        <h3 class="step_title">Lycée Jacques de Vaucanson, Tours</h3>
+                                        <h3 class="step_under_title">- BAC S</h3>
+                                        <p class="step_description">En derniere année, je me suis tourné
+                                            vers l'option ISN, afin de
+                                            mes compléter mes connaissances en programmation, et
+                                            particulièrement en langage Python.
+                                        </p>
+                                        <p class="step_year">2015 - 2018</p>
+                                    </div>
+                                </div>
+                                <div class="progress_step">
+                                    <div>
+                                        <h3 class="step_title">Lycée Jacques de Vaucanson, Tours</h3>
+                                        <h3 class="step_under_title">- BAC S</h3>
+                                        <p class="step_description">En derniere année, je me suis tourné
+                                            vers l'option ISN, afin de
+                                            mes compléter mes connaissances en programmation, et
+                                            particulièrement en langage Python.
+                                        </p>
+                                        <p class="step_year">2015 - 2018</p>
+                                    </div>
+                                </div>
+                                <div class="progress_step">
+                                    <div>
+                                        <h3 class="step_title">Lycée Jacques de Vaucanson, Tours</h3>
+                                        <h3 class="step_under_title">- BAC S</h3>
+                                        <p class="step_description">En derniere année, je me suis tourné
+                                            vers l'option ISN, afin de
+                                            mes compléter mes connaissances en programmation, et
+                                            particulièrement en langage Python.
+                                        </p>
+                                        <p class="step_year">2015 - 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="about_content_parcours">
-                    <div class="about_left_section about_title">
+                    <div class="about_left_section about_title" style="margin: 12rem 3rem 0; height: 100vh;">
                         Test
                     </div>
                 </div>
@@ -139,11 +207,15 @@
     </div>
 
     <script defer>
+        TweenLite.defaultEase = Linear.easeNone;
+
+        var titles = document.querySelectorAll(".horizontal_container_title");
+        
+        var elementWidth = document.getElementById('horizontal_container').offsetWidth;
+
         var controller = new ScrollMagic.Controller();
 
         var tl = new TimelineMax();
-
-        var elementWidth = document.getElementById('horizontal_container').offsetWidth;
 
         var width = window.innerWidth - elementWidth;
 
@@ -151,16 +223,25 @@
 
         var official = duration + '%';
 
-        tl
-        .to('#horizontal_container', 5, {x: width, ease: Power0.easeNone});
+        tl.to(".horizontal_container_content", 1, {
+            x: width,
+            ease: Power0.easeNone
+        }, "label1");
+        tl.from(titles[0], 0.5, {
+            opacity: 1
+        }, "label1+=0");
 
         var scene1 = new ScrollMagic.Scene({
-        triggerElement: '#horizontal_container',
-        triggerHook: 0,
-        duration: official
+            triggerElement: '#horizontal_container',
+            triggerHook: "onLeave",
+            duration: official
         })
         .setPin('#horizontal_container')
         .setTween(tl)
+        .on("progress", function(e) {
+            var progressvalue = 100 * e.progress;
+            document.querySelector('#complete_line').style.width = progressvalue +"%";
+        })
         .addTo(controller);
 
         console.log(elementWidth);
