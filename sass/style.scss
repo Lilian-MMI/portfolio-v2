@@ -354,7 +354,7 @@ html {
     width: 25px;
     height: 3px;
     margin-bottom: 4px;
-    background-color: #dcdcdc;
+    background-color: var(--white-text-color);
     position: relative;
     @include transition(all 0.4s ease);
 
@@ -739,24 +739,16 @@ main {
   > .entire_line {
     height: 4px;
     background-color: #8c8c8c;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    @include borderRadius('0.5rem');
   }
 
   > #complete_line {
     margin-top: -4px;
-    background-color: #dcdcdc;
+    background-color: var(--white-text-color);
     width: 0;
     height: 4px;
     position: absolute;
-    border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    @include borderRadius('0.5rem');
     @include transition(width 0.2s cubic-bezier(0, 1.01, 0.58, 1));
   }
 }
@@ -780,6 +772,33 @@ main {
 .progress_step {
   width: 20rem;
   position: absolute;
+  margin-top: 2rem;
+
+  .step_title {
+    color: var(--white-text-color);
+    font-family: "Domaine Display Narrow Black";
+    font-size: 1.5rem;
+
+    > span {
+      color: #8b8b8b;
+      font-family: "Domaine Display Narrow Semibold";
+      font-size: 1rem;
+    }
+  }
+
+  .step_description {
+    font-size: 0.8rem;
+    color: #8b8b8b;
+    font-family: "Proxima Nova Rg";
+    font-weight: 200;
+  }
+
+  .step_year {
+    font-size: 0.9rem;
+    color: #8b8b8b;
+    font-family: "Proxima Nova Bl";
+    font-weight: 800;
+  }
 
   &:nth-child(1){
     left: 50vw;

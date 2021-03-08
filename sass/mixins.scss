@@ -21,3 +21,11 @@
   -o-transform: #{$str};
   transform: #{$str}; 
 }
+
+@mixin borderRadius($str) {
+  -webkit-border-radius: #{$str};
+  -moz-border-radius: #{$str};
+  -ms-border-radius: #{$str};
+  -o-border-radius: #{$str};
+  border-radius: #{$str};
+}
