@@ -684,12 +684,18 @@ html {
   width: 1px;
   height: 100px;
   background-color: #969696;
-  animation: white_line_bg_bolt 30s linear infinite forwards;
-  -webkit-animation: white_line_bg_bolt 30s linear infinite forwards;
+  -webkit-animation: 30s white_line_bg_bolt linear infinite forwards;
+  -moz-animation: 30s white_line_bg_bolt linear infinite forwards;
+  -ms-animation: 30s white_line_bg_bolt linear infinite forwards;
+  -o-animation: 30s white_line_bg_bolt linear infinite forwards;
+  animation: 30s white_line_bg_bolt linear infinite forwards;
 }
 .bg_white_vertical_line.about {
-  animation: white_line_bg_bolt 120s linear infinite forwards;
-  -webkit-animation: white_line_bg_bolt 120s linear infinite forwards;
+  -webkit-animation: 120s, white_line_bg_bolt, linear, forwards, infinite;
+  -moz-animation: 120s, white_line_bg_bolt, linear, forwards, infinite;
+  -ms-animation: 120s, white_line_bg_bolt, linear, forwards, infinite;
+  -o-animation: 120s, white_line_bg_bolt, linear, forwards, infinite;
+  animation: 120s, white_line_bg_bolt, linear, forwards, infinite;
 }
 
 .bg_vertical_line {
@@ -703,7 +709,7 @@ html {
   display: flex;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   background-color: var(--main-color);
   z-index: 1;
@@ -718,11 +724,11 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .bg_menu_text p {
   font-family: "Domaine Display Narrow Black";
@@ -730,11 +736,11 @@ html {
   color: #242424b8;
   font-size: 20vw;
   letter-spacing: 0.2em;
-  transform: translateX(0.08em);
   -webkit-transform: translateX(0.08em);
   -moz-transform: translateX(0.08em);
   -ms-transform: translateX(0.08em);
   -o-transform: translateX(0.08em);
+  transform: translateX(0.08em);
 }
 @media (min-width: 48rem) {
   .bg_menu_text p {
@@ -759,12 +765,11 @@ html {
 }
 .bg_link_option:hover {
   white-space: nowrap;
-  transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-  background-position: 0%;
   -webkit-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   -moz-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   -ms-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
   -o-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
+  transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
 }
 .bg_link_option::after {
   content: "";
@@ -775,24 +780,23 @@ html {
   margin-top: 0;
   right: 1px;
   background: var(--seconday-color);
-  transform: translate3d(-100%, 0, 0);
-  transition: transform 0.4s;
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  -moz-transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  -ms-transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  -o-transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform: translate3d(-100%, 0, 0);
   -moz-transform: translate3d(-100%, 0, 0);
   -ms-transform: translate3d(-100%, 0, 0);
   -o-transform: translate3d(-100%, 0, 0);
-  -webkit-transition: transform 0.4s;
-  -moz-transition: transform 0.4s;
-  -ms-transition: transform 0.4s;
-  -o-transition: transform 0.4s;
+  transform: translate3d(-100%, 0, 0);
 }
 .bg_link_option:hover::after {
-  transform: translate3d(110%, 0, 0);
   -webkit-transform: translate3d(110%, 0, 0);
   -moz-transform: translate3d(110%, 0, 0);
   -ms-transform: translate3d(110%, 0, 0);
   -o-transform: translate3d(110%, 0, 0);
+  transform: translate3d(110%, 0, 0);
 }
 .bg_link_option:hover::before {
   width: 100%;
@@ -825,62 +829,62 @@ html {
 }
 
 .active_hover_about {
-  transform: translate3d(0, 100%, 0);
   -webkit-transform: translate3d(0, 100%, 0);
   -moz-transform: translate3d(0, 100%, 0);
   -ms-transform: translate3d(0, 100%, 0);
   -o-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
 @media (min-width: 48rem) {
   .active_hover_about {
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
     -moz-transform: translate3d(100%, 0, 0);
     -ms-transform: translate3d(100%, 0, 0);
     -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
 }
 
 .active_hover_projects {
-  transform: translate3d(0, 200%, 0);
   -webkit-transform: translate3d(0, 200%, 0);
   -moz-transform: translate3d(0, 200%, 0);
   -ms-transform: translate3d(0, 200%, 0);
   -o-transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 200%, 0);
 }
 @media (min-width: 48rem) {
   .active_hover_projects {
     -webkit-transform: translate3d(200%, 0, 0);
-    transform: translate3d(200%, 0, 0);
     -moz-transform: translate3d(200%, 0, 0);
     -ms-transform: translate3d(200%, 0, 0);
     -o-transform: translate3d(200%, 0, 0);
+    transform: translate3d(200%, 0, 0);
   }
 }
 
 .active_hover_contact {
-  transform: translate3d(0, 300%, 0);
   -webkit-transform: translate3d(0, 300%, 0);
   -moz-transform: translate3d(0, 300%, 0);
   -ms-transform: translate3d(0, 300%, 0);
   -o-transform: translate3d(0, 300%, 0);
+  transform: translate3d(0, 300%, 0);
 }
 @media (min-width: 48rem) {
   .active_hover_contact {
     -webkit-transform: translate3d(300%, 0, 0);
-    transform: translate3d(300%, 0, 0);
     -moz-transform: translate3d(300%, 0, 0);
     -ms-transform: translate3d(300%, 0, 0);
     -o-transform: translate3d(300%, 0, 0);
+    transform: translate3d(300%, 0, 0);
   }
 }
 
 .bg_option_selected {
   -webkit-transform: translateZ(0);
-  transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 #bg_menu_selected {
@@ -896,10 +900,10 @@ html {
   background: #111;
   box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
   -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
   -moz-transition: 0.4s ease-out;
   -ms-transition: 0.4s ease-out;
   -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 @media (min-width: 48rem) {
   #bg_menu_selected {
@@ -925,11 +929,11 @@ html {
   bottom: auto;
   background: var(--seconday-color);
   z-index: 2;
-  -webkit-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -moz-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -ms-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -o-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -webkit-transition: 0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -moz-transition: 0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -ms-transition: 0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1);
+  -o-transition: 0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1);
+  transition: 0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1);
 }
 .transition_color.active {
   right: 100%;
@@ -991,11 +995,11 @@ html {
   margin-bottom: 4px;
   background-color: #dcdcdc;
   position: relative;
-  -webkit-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-  transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 @media (min-width: 48rem) {
   .menu div {
@@ -1014,10 +1018,10 @@ html {
 .menu:hover div.line_1 {
   width: 20px;
   -webkit-transform: translateY(6px) rotate(90deg);
-  transform: translateY(6px) rotate(90deg);
   -moz-transform: translateY(6px) rotate(90deg);
   -ms-transform: translateY(6px) rotate(90deg);
   -o-transform: translateY(6px) rotate(90deg);
+  transform: translateY(6px) rotate(90deg);
 }
 @media (min-width: 48rem) {
   .menu:hover div.line_1 {
@@ -1037,20 +1041,20 @@ html {
 }
 
 .hover_line_1 {
-  transform: translate(0, 7px) rotate(135deg);
   -webkit-transform: translate(0, 7px) rotate(135deg);
   -moz-transform: translate(0, 7px) rotate(135deg);
   -ms-transform: translate(0, 7px) rotate(135deg);
   -o-transform: translate(0, 7px) rotate(135deg);
+  transform: translate(0, 7px) rotate(135deg);
 }
 
 .hover_line_2 {
-  transform: rotate(45deg);
   width: 20px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 @media (min-width: 48rem) {
   .hover_line_2 {
@@ -1060,11 +1064,11 @@ html {
 
 .menu:hover .hover_line_1 {
   width: 25px !important;
-  transform: translate(0, 7px) rotate(135deg) !important;
   -webkit-transform: translate(0, 7px) rotate(135deg) !important;
   -moz-transform: translate(0, 7px) rotate(135deg) !important;
   -ms-transform: translate(0, 7px) rotate(135deg) !important;
   -o-transform: translate(0, 7px) rotate(135deg) !important;
+  transform: translate(0, 7px) rotate(135deg) !important;
 }
 @media (min-width: 48rem) {
   .menu:hover .hover_line_1 {
@@ -1135,14 +1139,17 @@ main {
   height: 2px;
   background: var(--seconday-color);
   margin-top: 1.5rem;
-  transition: all 0.3s;
   margin-left: 3px;
-  -webkit-animation: cursorEffect 800ms infinite;
-  animation: cursorEffect 800ms infinite;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-animation: 800ms cursorEffect infinite;
+  -moz-animation: 800ms cursorEffect infinite;
+  -ms-animation: 800ms cursorEffect infinite;
+  -o-animation: 800ms cursorEffect infinite;
+  animation: 800ms cursorEffect infinite;
 }
 @media (min-width: 48rem) {
   .typewritter_underscore {
@@ -1180,8 +1187,11 @@ main {
   text-align: center;
 }
 .main_link:hover i {
-  -webkit-animation: hover_arrow 500ms infinite alternate;
-  animation: hover_arrow 500ms infinite alternate;
+  -webkit-animation: 500ms hover_arrow infinite alternate;
+  -moz-animation: 500ms hover_arrow infinite alternate;
+  -ms-animation: 500ms hover_arrow infinite alternate;
+  -o-animation: 500ms hover_arrow infinite alternate;
+  animation: 500ms hover_arrow infinite alternate;
 }
 
 .home_parallax {
@@ -1205,6 +1215,10 @@ main {
   height: 50%;
   background-position: center;
   margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .div_element_parallax:nth-child(2) .img_element_parallax {
@@ -1214,6 +1228,10 @@ main {
   height: 50%;
   background-position: center;
   margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .div_element_parallax:nth-child(3) .img_element_parallax {
@@ -1223,6 +1241,10 @@ main {
   height: 50%;
   background-position: center;
   margin-top: 50vh;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .div_element_parallax:nth-child(4) .img_element_parallax {
@@ -1230,11 +1252,15 @@ main {
   position: relative;
   width: 60%;
   height: inherit;
-  transform: translateY(-50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
   margin: 50vh auto 0;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .div_element_parallax:nth-child(5) .img_element_parallax {
   background: no-repeat url("/images/parallax/element (4).svg");
@@ -1243,9 +1269,13 @@ main {
   height: 8%;
   background-position: center;
   margin-top: 50vh;
-  transform: translateY(-50%);
   top: 20%;
   left: -10%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .about_content_description {
@@ -1370,10 +1400,14 @@ main {
 #horizontal_container > .horizontal_container_content {
   position: absolute;
   top: calc(50% + 3rem);
-  transform: translateY(-50%);
   width: 100%;
   display: flex;
   flex-direction: column;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .horizontal_container_title {
@@ -1412,11 +1446,11 @@ main {
   -moz-border-radius: 0.5rem;
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
-  transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
   -webkit-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
   -moz-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
   -ms-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
   -o-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
+  transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
 }
 
 .horizontal_container_bg_text {

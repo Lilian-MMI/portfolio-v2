@@ -1,3 +1,4 @@
+@import "./mixins.scss";
 @import "./fonts.scss";
 @import "./keyframes.scss";
 
@@ -109,12 +110,10 @@ html {
   width: 1px;
   height: 100px;
   background-color: #969696;
-  animation: white_line_bg_bolt 30s linear infinite forwards;
-  -webkit-animation: white_line_bg_bolt 30s linear infinite forwards;
+  @include animation('30s white_line_bg_bolt linear infinite forwards');
   
   &.about {
-    animation: white_line_bg_bolt 120s linear infinite forwards;
-    -webkit-animation: white_line_bg_bolt 120s linear infinite forwards;
+    @include animation('120s, white_line_bg_bolt, linear, forwards, infinite');
   }
 }
 
@@ -129,7 +128,7 @@ html {
   display: flex;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   flex-direction: column;
   background-color: var(--main-color);
   z-index: 1;
@@ -143,11 +142,7 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  @include transform('translate(-50%, -50%)');
 
   p {
     font-family: "Domaine Display Narrow Black";
@@ -155,11 +150,8 @@ html {
     color: #242424b8;
     font-size: 20vw;
     letter-spacing: 0.2em;
-    transform: translateX(0.08em);
-    -webkit-transform: translateX(0.08em);
-    -moz-transform: translateX(0.08em);
-    -ms-transform: translateX(0.08em);
-    -o-transform: translateX(0.08em);
+    @include transform('translateX(0.08em)');
+
     @media #{$mq-small} {
       font-size: 14rem;
     }
@@ -183,13 +175,8 @@ html {
 
   &:hover {
     white-space: nowrap;
-    transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    background-position: 0%;
-    -webkit-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    -moz-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    -ms-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-    -o-transition: all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53);
-  }
+    @include transition(all 0.3s cubic-bezier(0.55, 0.09, 0.68, 0.53));
+}
 
   &::after {
     content: "";
@@ -200,26 +187,13 @@ html {
     margin-top: 0;
     right: 1px;
     background: var(--seconday-color);
-    transform: translate3d(-100%, 0, 0);
-    transition: transform 0.4s;
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-    -webkit-transform: translate3d(-100%, 0, 0);
-    -moz-transform: translate3d(-100%, 0, 0);
-    -ms-transform: translate3d(-100%, 0, 0);
-    -o-transform: translate3d(-100%, 0, 0);
-    -webkit-transition: transform 0.4s;
-    -moz-transition: transform 0.4s;
-    -ms-transition: transform 0.4s;
-    -o-transition: transform 0.4s;
-  }
+    @include transition(transform 0.4s cubic-bezier(0.7, 0, 0.3, 1));
+    @include transform('translate3d(-100%, 0, 0)');
+}
 
   &:hover {
     &::after {
-      transform: translate3d(110%, 0, 0);
-      -webkit-transform: translate3d(110%, 0, 0);
-      -moz-transform: translate3d(110%, 0, 0);
-      -ms-transform: translate3d(110%, 0, 0);
-      -o-transform: translate3d(110%, 0, 0);
+      @include transform('translate3d(110%, 0, 0)');
     }
 
     &::before {
@@ -253,59 +227,31 @@ html {
 }
 
 .active_hover_about {
-  transform: translate3d(0, 100%, 0);
-  -webkit-transform: translate3d(0, 100%, 0);
-  -moz-transform: translate3d(0, 100%, 0);
-  -ms-transform: translate3d(0, 100%, 0);
-  -o-transform: translate3d(0, 100%, 0);
+  @include transform('translate3d(0, 100%, 0)');
 
   @media #{$mq-small} {
-    -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
-    -moz-transform: translate3d(100%, 0, 0);
-    -ms-transform: translate3d(100%, 0, 0);
-    -o-transform: translate3d(100%, 0, 0);
+    @include transform('translate3d(100%, 0, 0)');
   }
 }
 
 .active_hover_projects {
-  transform: translate3d(0, 200%, 0);
-  -webkit-transform: translate3d(0, 200%, 0);
-  -moz-transform: translate3d(0, 200%, 0);
-  -ms-transform: translate3d(0, 200%, 0);
-  -o-transform: translate3d(0, 200%, 0);
+  @include transform('translate3d(0, 200%, 0)');
 
   @media #{$mq-small} {
-    -webkit-transform: translate3d(200%, 0, 0);
-    transform: translate3d(200%, 0, 0);
-    -moz-transform: translate3d(200%, 0, 0);
-    -ms-transform: translate3d(200%, 0, 0);
-    -o-transform: translate3d(200%, 0, 0);
+    @include transform('translate3d(200%, 0, 0)');
   }
 }
 
 .active_hover_contact {
-  transform: translate3d(0, 300%, 0);
-  -webkit-transform: translate3d(0, 300%, 0);
-  -moz-transform: translate3d(0, 300%, 0);
-  -ms-transform: translate3d(0, 300%, 0);
-  -o-transform: translate3d(0, 300%, 0);
+  @include transform('translate3d(0, 300%, 0)');
 
   @media #{$mq-small} {
-    -webkit-transform: translate3d(300%, 0, 0);
-    transform: translate3d(300%, 0, 0);
-    -moz-transform: translate3d(300%, 0, 0);
-    -ms-transform: translate3d(300%, 0, 0);
-    -o-transform: translate3d(300%, 0, 0);
+    @include transform('translate3d(300%, 0, 0)');
   }
 }
 
 .bg_option_selected {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
+  @include transform('translateZ(0)');
 }
 
 #bg_menu_selected {
@@ -320,11 +266,7 @@ html {
   margin: 0 0 0;
   background: #111;
   box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
-  -moz-transition: 0.4s ease-out;
-  -ms-transition: 0.4s ease-out;
-  -o-transition: 0.4s ease-out;
+  @include transition(0.4s ease-out);
 
   @media #{$mq-small} {
     width: 25%;
@@ -349,11 +291,7 @@ html {
   bottom: auto;
   background: var(--seconday-color);
   z-index: 2;
-  -webkit-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -moz-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -ms-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
-  -o-transition: all 0.9s cubic-bezier(0.6, 0.05, 0.4, 1);
+  @include transition(0.9s all 0s cubic-bezier(0.6, 0.05, 0.4, 1));
 
   &.active {
     right: 100%;
@@ -418,11 +356,7 @@ html {
     margin-bottom: 4px;
     background-color: #dcdcdc;
     position: relative;
-    -webkit-transition: 0.4s all ease;
-    -o-transition: 0.4s all ease;
-    transition: 0.4s all ease;
-    -moz-transition: 0.4s all ease;
-    -ms-transition: 0.4s all ease;
+    @include transition(all 0.4s ease);
 
     @media #{$mq-small} {
       width: 35px;
@@ -441,11 +375,7 @@ html {
   &:hover div {
     &.line_1 {
       width: 20px;
-      -webkit-transform: translateY(6px) rotate(90deg);
-      transform: translateY(6px) rotate(90deg);
-      -moz-transform: translateY(6px) rotate(90deg);
-      -ms-transform: translateY(6px) rotate(90deg);
-      -o-transform: translateY(6px) rotate(90deg);
+      @include transform('translateY(6px) rotate(90deg)');
 
       @media #{$mq-small} {
         width: 30px;
@@ -467,20 +397,12 @@ html {
 }
 
 .hover_line_1 {
-  transform: translate(0, 7px) rotate(135deg);
-  -webkit-transform: translate(0, 7px) rotate(135deg);
-  -moz-transform: translate(0, 7px) rotate(135deg);
-  -ms-transform: translate(0, 7px) rotate(135deg);
-  -o-transform: translate(0, 7px) rotate(135deg);
+  @include transform('translate(0, 7px) rotate(135deg)');
 }
 
 .hover_line_2 {
-  transform: rotate(45deg);
   width: 20px;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  @include transform('rotate(45deg)');
 
   @media #{$mq-small} {
     width: 30px;
@@ -490,11 +412,7 @@ html {
 .menu:hover {
   .hover_line_1 {
     width: 25px !important;
-    transform: translate(0, 7px) rotate(135deg) !important;
-    -webkit-transform: translate(0, 7px) rotate(135deg) !important;
-    -moz-transform: translate(0, 7px) rotate(135deg) !important;
-    -ms-transform: translate(0, 7px) rotate(135deg) !important;
-    -o-transform: translate(0, 7px) rotate(135deg) !important;
+    @include transform('translate(0, 7px) rotate(135deg) !important');
 
     @media #{$mq-small} {
       width: 35px !important;
@@ -564,14 +482,10 @@ main {
   height: 2px;
   background: var(--seconday-color);
   margin-top: 1.5rem;
-  transition: all 0.3s;
   margin-left: 3px;
-  -webkit-animation: cursorEffect 800ms infinite;
-  animation: cursorEffect 800ms infinite;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
+
+  @include transition(all 0.3s);
+  @include animation('800ms cursorEffect infinite');
 
   @media #{$mq-small} {
     margin-top: 1.8rem;
@@ -609,8 +523,7 @@ main {
   }
 
   &:hover i {
-    -webkit-animation: hover_arrow 500ms infinite alternate;
-    animation: hover_arrow 500ms infinite alternate;
+    @include animation('500ms hover_arrow infinite alternate');
   }
 }
 
@@ -635,7 +548,7 @@ main {
     height: 50%;
     background-position: center;
     margin-top: 50vh;
-    transform: translateY(-50%);
+    @include transform('translateY(-50%)');
   }
 
   &:nth-child(2) .img_element_parallax {
@@ -645,7 +558,7 @@ main {
     height: 50%;
     background-position: center;
     margin-top: 50vh;
-    transform: translateY(-50%);
+    @include transform('translateY(-50%)');
   }
 
   &:nth-child(3) .img_element_parallax {
@@ -655,7 +568,7 @@ main {
     height: 50%;
     background-position: center;
     margin-top: 50vh;
-    transform: translateY(-50%);
+    @include transform('translateY(-50%)');
   }
 
   &:nth-child(4) .img_element_parallax {
@@ -663,11 +576,11 @@ main {
     position: relative;
     width: 60%;
     height: inherit;
-    transform: translateY(-50%);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     margin: 50vh auto 0;
+    @include transform('translateY(-50%)');
   }
 
   &:nth-child(5) .img_element_parallax {
@@ -677,9 +590,9 @@ main {
     height: 8%;
     background-position: center;
     margin-top: 50vh;
-    transform: translateY(-50%);
     top: 20%;
     left: -10%;
+    @include transform('translateY(-50%)');
   }
 }
 
@@ -801,10 +714,10 @@ main {
 #horizontal_container > .horizontal_container_content {
   position: absolute;
   top: calc(50% + 3rem);
-  transform: translateY(-50%);
   width: 100%;
   display: flex;
   flex-direction: column;
+  @include transform('translateY(-50%)');
 }
 
 .horizontal_container_title {
@@ -844,11 +757,7 @@ main {
     -moz-border-radius: 0.5rem;
     -ms-border-radius: 0.5rem;
     -o-border-radius: 0.5rem;
-    transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
-    -webkit-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
-    -moz-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
-    -ms-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
-    -o-transition: width 0.2s cubic-bezier(0, 1.01, 0.58, 1);
+    @include transition(width 0.2s cubic-bezier(0, 1.01, 0.58, 1));
   }
 }
 
