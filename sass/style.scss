@@ -50,7 +50,7 @@ body,
 html {
   width: 100%;
   height: fit-content;
-  min-height: 100%;
+  min-height: 100vh;
   background-color: var(--main-color);
   margin: 0;
   position: relative;
@@ -308,6 +308,7 @@ html {
 /* Content */
 .content {
   max-width: $bp-large;
+  min-height: 100vh;
   position: relative;
   margin: 0 auto;
 }
@@ -446,10 +447,11 @@ main {
   }
 
   > div {
-    margin: auto 1.5rem;
+    margin: 50vh 1.5rem;
+    transform: translateY(-50%);
 
     @media #{$mq-small} {
-      margin: auto 0 auto 3rem;
+      margin: 50vh 0 auto 3rem;
     }
   }
 }
@@ -706,9 +708,13 @@ main {
 }
 
 #horizontal_container {
-  width: 350vw;
   height: 100vh;
   padding-bottom: 0;
+  width: 500vw;
+
+  @media #{$mq-small} {
+    width: 365vw;
+  }
 }
 
 #horizontal_container > .horizontal_container_content {
@@ -733,8 +739,12 @@ main {
 .line_progress_parcours {
   position: absolute;
   left: calc(50vw - 0.5rem);
-  width: 250vw;
   top: 50%;
+  width: 400vw;
+
+  @media #{$mq-small} {
+    width: 265vw;
+  }
 
   > .entire_line {
     height: 4px;
@@ -761,7 +771,11 @@ main {
   margin: 0 auto;
   height: 100%;
   text-transform: uppercase;
-  color: #2d2d2d;
+  color: #ffffff0a;
+
+  @media #{$mq-xsmall} {
+    opacity: 0;
+  }
 }
 
 .horizontal_container_carreer {
@@ -770,9 +784,16 @@ main {
 }
 
 .progress_step {
-  width: 20rem;
+  width: 15rem;
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 1.8rem;
+  @media #{$mq-small} {
+    width: 20rem;
+  }
+
+  @media #{$mq-medium} {
+    margin-top: 2.5rem !important;
+  }
 
   .step_title {
     color: var(--white-text-color);
@@ -800,19 +821,100 @@ main {
     font-weight: 800;
   }
 
-  &:nth-child(1){
-    left: 50vw;
+  &:nth-child(1) {
+    left: 35vw;
   }
-  &:nth-child(2){
-    left: 100vw;
+
+  &:nth-child(2) {
+    left: 125vw;
+    margin-top: -.5rem;
+
+    @media #{$mq-small} {
+      left: 100vw;
+      margin-top: 1.8rem;
+    }
   }
-  &:nth-child(3){
-    left: 150vw;
-  }
-  &:nth-child(4){
+
+  &:nth-child(3) {
     left: 200vw;
+
+    @media #{$mq-small} {
+      left: 150vw;
+    }
   }
-  &:nth-child(5){
-    left: 250vw;
+
+  &:nth-child(4) {
+    left: 275vw;
+
+    @media #{$mq-small} {
+      left: 200vw;
+    }
+  }
+
+  &:nth-child(5) {
+    left: 350vw;
+
+
+    @media #{$mq-small} {
+      left: 250vw;
+    }
+  }
+
+  &:nth-child(6) {
+    left: 425vw;
+    margin-top: -.5rem;
+
+    @media #{$mq-small} {
+      left: 300vw;
+      margin-top: 1.8rem;
+    }
+  }
+}
+
+.about_content_hobbies {
+  height: 100vh;
+  position: relative;
+
+  > .about_title {
+    margin: 6rem 3rem 0;
+  }
+
+  > div:not(:first-child) {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+}
+
+$hobbiesBannerHeight: 12rem;
+
+.hobbies_banner {
+  height: $hobbiesBannerHeight;
+  margin-top: calc(-#{$hobbiesBannerHeight} /2);
+  width: 100%;
+  padding: 4rem 1rem;
+  background-color: #111111c2;
+  box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.hobby_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  color: var(--white-text-color);
+
+  > i.fad {
+    text-align: center;
+  }
+
+  > p {
+    font-size: 1rem;
+    font-family: "Proxima Nova Bl";
+    font-weight: 200;
+    text-align: center;
+    margin-top: 1rem;
   }
 }
