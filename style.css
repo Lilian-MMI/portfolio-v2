@@ -669,6 +669,10 @@ html {
   height: fit-content;
 }
 
+.overflow_hidden {
+  overflow: hidden;
+}
+
 /* Background */
 .bg_section {
   display: flex;
@@ -707,9 +711,9 @@ html {
 /* Background menu */
 #bg_menu {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   background-color: var(--main-color);
   z-index: 1;
@@ -816,6 +820,7 @@ html {
     height: 100%;
     border-right: solid 0.5px #535353;
     line-height: 100vh;
+    border-bottom: none;
   }
 }
 
@@ -1611,6 +1616,51 @@ main {
   font-weight: 200;
   text-align: center;
   margin-top: 1rem;
+}
+
+.project_section {
+  height: 100vh;
+}
+.project_section div:first-child {
+  width: 11rem;
+  margin: auto auto;
+}
+@media (min-width: 48rem) {
+  .project_section div:first-child {
+    width: 25rem;
+  }
+}
+@media (max-width: 36rem) {
+  .project_section div:first-child {
+    margin: auto 2rem;
+  }
+}
+.project_section div:first-child > p {
+  font-family: "Proxima Nova Bl";
+  color: var(--white-text-color);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+@media (min-width: 48rem) {
+  .project_section div:first-child > p {
+    left: 300vw;
+    margin-top: 1.8rem;
+  }
+}
+.project_section .main_link {
+  position: absolute;
+  font-family: "Proxima Nova Bl";
+  font-size: 1.2rem;
+  color: var(--white-text-color);
+}
+.project_section .main_link > i {
+  vertical-align: text-bottom;
+  font-size: 1.2rem;
+  color: var(--seconday-color);
+}
+
+.mark {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #5ae1b4 90%);
 }
 
 /*# sourceMappingURL=style.css.map */

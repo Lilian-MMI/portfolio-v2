@@ -3,7 +3,8 @@ const toggleDisplayMenu = () => {
     document.querySelector('.line_1').classList.toggle('hover_line_1');
     document.querySelector('.line_2').classList.toggle('hover_line_2');
     document.querySelector('.line_3').classList.toggle('d_none');
-
+    document.body.classList.toggle('overflow_hidden');
+    
     setTimeout(function () {
         document.querySelector('#bg_menu').classList.toggle('d_none');
     }, 500);

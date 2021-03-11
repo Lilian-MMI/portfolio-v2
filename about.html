@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
     <script src="./js/typewritting.js" defer></script>
     <script src="./js/menu.js" defer></script>
+    <script src="./js/parallax.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
     <script src="./js/barba.js" defer></script>
     <script src="./js/fontawesome.min.js" defer></script>
     <script src='https://cdn.jsdelivr.net/npm/@barba/core'></script>
@@ -19,7 +21,7 @@
 <body data-barba="wrapper">
     <!-- background vertical line -->
     <div class="bg_section">
-        <div class="bg_white_vertical_line about"></div>
+        <div class="bg_white_vertical_line"></div>
         <span class="bg_vertical_line"></span>
         <span class="bg_vertical_line"></span>
         <span class="bg_vertical_line"></span>
@@ -42,7 +44,7 @@
         <a id="about_option" class="bg_link_option vertical_divider" href="./about.html">
             <span class="myx_auto">à propos</span>
         </a>
-        <a id="projects_option" class="bg_link_option vertical_divider" href="projets.html">
+        <a id="projects_option" class="bg_link_option vertical_divider" href="./projects.html">
             <span class="myx_auto">projets</span>
         </a>
         <a id="contact_option" class="bg_link_option vertical_divider" href="contact.html">
@@ -76,7 +78,7 @@
         <!--  -->
 
         <!--  -->
-        <section class="h-fit" data-barba="container" data-barba-namespace="slide-menu" data-background="#161636">
+        <section class="h-fit" data-barba="container" data-barba-namespace="slide-about" data-background="#161636">
             <main class="flex-column">
                 <div class="about_content_description">
                     <div class="about_left_section about_title">
@@ -240,46 +242,6 @@
 
     </div>
 
-    <script defer>
-        TweenLite.defaultEase = Linear.easeNone;
-
-        var titles = document.querySelectorAll(".horizontal_container_title");
-        
-        var elementWidth = document.getElementById('horizontal_container').offsetWidth;
-
-        var controller = new ScrollMagic.Controller();
-
-        var tl = new TimelineMax();
-
-        var width = window.innerWidth - elementWidth;
-
-        var duration = elementWidth / window.innerHeight * 100;
-
-        var official = duration + '%';
-
-        tl.to(".horizontal_container_content", 1, {
-            x: width,
-            ease: Power0.easeNone
-        }, "label1");
-        tl.from(titles[0], 0.5, {
-            opacity: 1
-        }, "label1+=0");
-
-        var scene1 = new ScrollMagic.Scene({
-            triggerElement: '#horizontal_container',
-            triggerHook: "onLeave",
-            duration: official
-        })
-        .setPin('#horizontal_container')
-        .setTween(tl)
-        .on("progress", function(e) {
-            var progressvalue = 100 * e.progress;
-            document.querySelector('#complete_line').style.width = progressvalue +"%";
-        })
-        .addTo(controller);
-
-        console.log(elementWidth);
-    </script>
 </body>
 
 </html>

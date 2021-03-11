@@ -23,22 +23,22 @@ for (let link of links) {
 
 /* Page transition */
 barba.init({
+    
     prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
-    transitions: [{
-        name: 'slide-menu',
-        to: {
-            namespace: ['slide-menu']
+    views: [
+        {
+            namespace: 'slide-index',
+            afterEnter() {
+                startParallax();
+                typewritting();
+            }   
         },
-        leave() { 
-/*             toggleDisplayMenu(),
-            slideMenuTransition() */
+        {
+            namespace: 'slide-about',
+            afterEnter() {
+                activeHorizontalScroll();
+            }
         }
-    }],
-    views: [{
-        namespace: 'slide-index',
-        afterEnter() {
-            startParallax()
-            typewritting();
-        }
-    }]
+    ]
+
 });
