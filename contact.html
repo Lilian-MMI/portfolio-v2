@@ -79,12 +79,35 @@
 
         <!--  -->
         <section class="h-fit" data-barba="container" data-barba-namespace="slide-about" data-background="#161636">
-            <main class="project_section">
-                <div>
-                    <p>Cette page n'existe pas encore...<br>mais vous pouvez toujours &nbsp;<a class="main_link prevent"
-                            href="./contact.html"><span class="mark">me contacter</span><i
-                                class="fad fa-long-arrow-right"></i></a>
-                    </p>
+            <main class="flex-column">
+                <div class="contact_content">
+                    <div class="contact_information">
+                        <p>me contacter</p>
+                        <div class="contact_information_wrapper">
+                            <div class="d_flex flex-column">
+                                <h3>email</h3>
+                                <a class="prevent" href="mailto:ouvrard.l@outlook.com">ouvrard.l@outlook.com</a>
+                            </div>
+                            <div class="d_flex flex-column">
+                                <h3>telephone</h3>
+                                <a class="prevent" href="tel:+33782426909">(+33) 7 82 42 69 09</a>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form_contact" name="contact" method="POST" action="/success_form.html" netlify>
+                        <div>
+                            <input class="form_contact_input" type="text" name="name" placeholder="Nom Prénom"
+                                minlength="0" required/>
+                            <input class="form_contact_input" type="email" name="email" placeholder="Email" required/>
+                        </div>
+                        <input class="form_contact_input" type="text" name="object" placeholder="Object du message"
+                            minlength="0" required/>
+                            <br>
+                        <textarea class="form_contact_input text_area" name="message" placeholder="Message"
+                            minlength="25" maxlength="2000" required></textarea>
+                            <br>
+                        <button class="form_contact_submit_button mark" type="submit">Envoyer</button>
+                    </form>
                 </div>
             </main>
         </section>
