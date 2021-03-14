@@ -10,7 +10,6 @@ let links = document.querySelectorAll('a[href]');
 for (let link of links) {
     if(link.classList.contains('prevent')) {
         link.addEventListener('click', e => {
-            slideMenuTransition()
             preventReload(e);
         });
     } else {
