@@ -975,12 +975,21 @@ $projectTextSize: 1.2rem;
 .contact_content {
   height: 100vh;
   width: 100%;
-  padding: 8rem 6rem 0;
+  padding: 8rem 2rem 0;
+
+  @media #{$mq-small} {
+    padding: 8rem 6rem 0;
+  }
 }
 
 .contact_information {
   > p {
-    @extend .about_title
+    @extend .about_title;
+    font-size: 2.5rem;
+
+    @media #{$mq-small} {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -988,6 +997,7 @@ $projectTextSize: 1.2rem;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 40rem;
 
   > div {
     min-width: 17rem;
@@ -1059,4 +1069,27 @@ $projectTextSize: 1.2rem;
   width: fit-content;
   align-self: flex-end;
   cursor: pointer;
+}
+
+.success_form_content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  > .succes_card {
+    margin: auto;
+    width: 20rem;
+    height: 10rem;
+
+    > .card_header > p {
+      font-family: "Domaine Display Narrow Extrabold";
+      font-size: 3rem;
+      color: var(--white-text-color);
+      font-weight: 700;
+    }
+
+    > .card_body > p {
+      @extend .home_description;
+    }
+  }
 }

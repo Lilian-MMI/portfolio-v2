@@ -1,0 +1,103 @@
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Lilian Ouvrard</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/typewritting.js" defer></script>
+    <script src="./js/menu.js" defer></script>
+    <script src="./js/parallax.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
+    <script src="./js/barba.js" defer></script>
+    <script src="./js/fontawesome.min.js" defer></script>
+    <script src='https://cdn.jsdelivr.net/npm/@barba/core'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+</head>
+
+<body data-barba="wrapper">
+    <!-- background vertical line -->
+    <div class="bg_section">
+        <div class="bg_white_vertical_line"></div>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+        <span class="bg_vertical_line"></span>
+    </div>
+    <!--  -->
+
+    <!-- menu -->
+    <div id="bg_menu" class="d_none">
+        <div class="bg_menu_text">
+            <p>menu</p>
+        </div>
+        <a id="home_option" class="bg_link_option vertical_divider active_hover" href="index.html">
+            <span class="myx_auto">accueil</span>
+        </a>
+        <a id="about_option" class="bg_link_option vertical_divider" href="./about.html">
+            <span class="myx_auto">à propos</span>
+        </a>
+        <a id="projects_option" class="bg_link_option vertical_divider" href="./projects.html">
+            <span class="myx_auto">projets</span>
+        </a>
+        <a id="contact_option" class="bg_link_option vertical_divider" href="./contact.html">
+            <span class="myx_auto">contact</span>
+        </a>
+        <div id="bg_menu_selected" class="active_hover_about"></div>
+    </div>
+    <!--  -->
+
+    <!-- menu transition -->
+    <div id="transition_menu">
+        <div class="transition_color"></div>
+        <div class="transition_color transition_color_2"></div>
+    </div>
+    <!--  -->
+
+    <div class="content">
+        <!-- header -->
+        <div class="header">
+            <div>
+                <a class="prevent" href="./index.html"><img class="logo" src="./images/logo.svg" alt="logo" /></a>
+                <div id="menu_icon">
+                    <a class="menu">
+                        <div class="line_1"></div>
+                        <div class="line_2"></div>
+                        <div class="line_3"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+
+        <!--  -->
+        <section class="h-fit" data-barba="container" data-barba-namespace="slide-about" data-background="#161636">
+            <main class="flex-column">
+                <div class="success_form_content">
+                    <div class="succes_card">
+                        <div class="card_header">
+                            <p>Merci !</p>
+                        </div>
+                        <div class="card_body">
+                            <p>Votre formulaire m'est bien parvenu ! Je reviendrai vers vous d'ici peu.</p>
+                            <a class="main_link prevent" onclick="history.back()">Continuer la visite <i
+                                    class="fad fa-long-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </section>
+        <!--  -->
+
+    </div>
+
+</body>
+
+</html>

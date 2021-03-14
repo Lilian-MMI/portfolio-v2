@@ -1167,7 +1167,7 @@ main {
   margin: 0;
 }
 
-.home_description {
+.home_description, .success_form_content > .succes_card > .card_body > p {
   font-weight: 100;
   font-size: 1rem;
   color: var(--white-text-color);
@@ -1660,13 +1660,28 @@ main {
 .contact_content {
   height: 100vh;
   width: 100%;
-  padding: 8rem 6rem 0;
+  padding: 8rem 2rem 0;
+}
+@media (min-width: 48rem) {
+  .contact_content {
+    padding: 8rem 6rem 0;
+  }
+}
+
+.contact_information > p {
+  font-size: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .contact_information > p {
+    font-size: 3rem;
+  }
 }
 
 .contact_information_wrapper {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
+  max-width: 40rem;
 }
 .contact_information_wrapper > div {
   min-width: 17rem;
@@ -1731,6 +1746,23 @@ main {
   width: fit-content;
   align-self: flex-end;
   cursor: pointer;
+}
+
+.success_form_content {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.success_form_content > .succes_card {
+  margin: auto;
+  width: 20rem;
+  height: 10rem;
+}
+.success_form_content > .succes_card > .card_header > p {
+  font-family: "Domaine Display Narrow Extrabold";
+  font-size: 3rem;
+  color: var(--white-text-color);
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
