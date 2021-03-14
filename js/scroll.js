@@ -1,19 +1,15 @@
+/* Function to init horizontal scrolling */
 const activeHorizontalScroll = () => {
     TweenLite.defaultEase = Linear.easeNone;
 
-    var titles = document.querySelectorAll(".horizontal_container_title");
-
-    var elementWidth = document.getElementById('horizontal_container').offsetWidth;
-
-    var controller = new ScrollMagic.Controller();
-
-    var tl = new TimelineMax();
-
-    var width = window.innerWidth - elementWidth;
-
-    var duration = elementWidth / window.innerHeight * 100;
-
-    var official = duration + '%';
+    /* define variables */
+    let titles = document.querySelectorAll(".horizontal_container_title");
+    let elementWidth = document.getElementById('horizontal_container').offsetWidth;
+    let controller = new ScrollMagic.Controller();
+    let tl = new TimelineMax();
+    let width = window.innerWidth - elementWidth;
+    let duration = elementWidth / window.innerHeight * 100;
+    let official = duration + '%';
 
     tl.to(".horizontal_container_content", 1, {
         x: width,
@@ -23,6 +19,7 @@ const activeHorizontalScroll = () => {
         opacity: 1
     }, "label1+=0");
 
+    /* Active the scroll scene & the progress line */
     new ScrollMagic.Scene({
             triggerElement: '#horizontal_container',
             triggerHook: "onLeave",

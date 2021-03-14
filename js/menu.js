@@ -42,3 +42,6 @@ projects_option.addEventListener('mouseleave', () => bg_menu_selected.classList.
 
 contact_option.addEventListener('mouseenter', () => bg_menu_selected.classList.add('active_hover_contact'));
 contact_option.addEventListener('mouseleave', () => bg_menu_selected.classList.remove('active_hover_contact'));
+
+/* Just a log... */
+console.log('%c A la recherche d\'info ? Venez me contacter ! ', 'background: #171717; color: #dcdcdc; font-family: "Domaine Display Narrow Black"; font-size: 1.5rem');

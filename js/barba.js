@@ -11,8 +11,7 @@ for (let link of links) {
     if(link.classList.contains('prevent')) {
         link.addEventListener('click', e => {
             slideMenuTransition()
-            slideMenuTransition()
-            preventReload(e)
+            preventReload(e);
         });
     } else {
         link.addEventListener('click', e => {
@@ -25,7 +24,6 @@ for (let link of links) {
 
 /* Page transition */
 barba.init({
-    
     prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
     views: [
         {
