@@ -56,6 +56,8 @@ html {
   position: relative;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  @include transition(all, 200ms, ease-in-out);
+  transition-property: color, background-color;
 
   @media #{$mq-medium} {
     font-size: $base-font-size * 1.2;
