@@ -339,6 +339,11 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   a {
@@ -435,6 +440,30 @@ html {
 
     @media #{$mq-small} {
       width: 35px !important;
+    }
+  }
+}
+
+.theme_switcher {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-text-menu);
+  text-align: center;
+  display: flex;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  i {
+    margin: auto;
+    color: var(--white-text-color);
+    display: none;
+    opacity: 0;
+    @include transition(opacity, 200ms, ease-in-out);
+
+    &.active {
+      display: block;
+      opacity: 1;
     }
   }
 }

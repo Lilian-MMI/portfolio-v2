@@ -13,6 +13,8 @@ const applyTheme = () => {
         document.documentElement.style.setProperty('--banner-color', '#dedede');
         document.documentElement.style.setProperty('--banner-shadow-color', '#dadadab8');
         document.querySelector('.logo').setAttribute('src', '/images/logo-black.svg');
+        document.querySelector('.theme_switcher > .fa-moon-stars').classList.add('active');
+        document.querySelector('.theme_switcher > .fa-sun').classList.remove('active');
     } else {
         localStorage.setItem('theme', 'dark');
         document.documentElement.style.setProperty('--main-color', '#171717');
@@ -22,6 +24,8 @@ const applyTheme = () => {
         document.documentElement.style.setProperty('--banner-color', '#111');
         document.documentElement.style.setProperty('--banner-shadow-color', '#0000006e');
         document.querySelector('.logo').setAttribute('src', '/images/logo.svg');
+        document.querySelector('.theme_switcher > .fa-sun').classList.add('active');
+        document.querySelector('.theme_switcher > .fa-moon-stars').classList.remove('active');
     }
 }
 
