@@ -1112,11 +1112,7 @@ html {
   color: var(--white-text-color);
   display: none;
   opacity: 0;
-  -webkit-transition: opacity, 200ms, ease-in-out;
-  -moz-transition: opacity, 200ms, ease-in-out;
-  -ms-transition: opacity, 200ms, ease-in-out;
-  -o-transition: opacity, 200ms, ease-in-out;
-  transition: opacity, 200ms, ease-in-out;
+  font-size: 20px;
 }
 .theme_switcher i.active {
   display: block;
