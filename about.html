@@ -28,6 +28,7 @@
     <script src="./js/menu.js" defer></script>
     <script src="./js/parallax.js" defer></script>
     <script src="./js/scroll.js" defer></script>
+    <script src="./js/theme.js" defer></script>
     <script src="./js/barba.js" defer></script>
     <script src="./js/fontawesome.min.js" defer></script>
 
@@ -39,7 +40,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
 </head>
 
-<body data-barba="wrapper">
+<body data-barba="wrapper" data-simplebar>
+
     <!-- background vertical line -->
     <div class="bg_section">
         <div class="bg_white_vertical_line"></div>
@@ -84,12 +86,18 @@
         <div class="header">
             <div>
                 <a class="prevent" href="./index.html"><img class="logo" src="./images/logo.svg" alt="logo" /></a>
-                <div id="menu_icon">
-                    <a class="menu">
-                        <div class="line_1"></div>
-                        <div class="line_2"></div>
-                        <div class="line_3"></div>
-                    </a>
+                <div>
+                    <div class="theme_switcher" onclick="changeTheme()">
+                        <i class="fad fa-moon-stars sm"></i>
+                        <i class="fad fa-sun sm"></i>
+                    </div>
+                    <div id="menu_icon">
+                        <a class="menu">
+                            <div class="line_1"></div>
+                            <div class="line_2"></div>
+                            <div class="line_3"></div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

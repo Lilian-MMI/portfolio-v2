@@ -30,12 +30,14 @@ barba.init({
             afterEnter() {
                 startParallax();
                 typewritting();
+                applyTheme();
             }   
         },
         {
             namespace: 'slide-about',
             afterEnter() {
                 activeHorizontalScroll();
+                applyTheme();
             }
         }
     ]

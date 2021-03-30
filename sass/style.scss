@@ -31,6 +31,9 @@ $header-line-height: 1.25;
   --main-color: #171717;
   --seconday-color: #5ae1b4;
   --white-text-color: #dcdcdc;
+  --bg-text-menu: #242424b8;
+  --banner-color: #111;
+  --banner-shadow-color: #0000006e;
 }
 
 /* General */
@@ -56,6 +59,8 @@ html {
   position: relative;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  @include transition(all, 200ms, ease-in-out);
+  transition-property: color, background-color;
 
   @media #{$mq-medium} {
     font-size: $base-font-size * 1.2;
@@ -151,7 +156,7 @@ html {
   p {
     font-family: "Domaine Display Narrow Black";
     text-transform: uppercase;
-    color: #242424b8;
+    color: var(--bg-text-menu);
     font-size: 20vw;
     letter-spacing: 0.2em;
     @include transform('translateX(0.08em)');
@@ -269,8 +274,8 @@ html {
   width: 100%;
   height: 25%;
   margin: 0 0 0;
-  background: #111;
-  box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
+  background: var(--banner-color);
+  box-shadow: 0 0 50px 10px var(--banner-shadow-color), 0 0 50px var(--banner-shadow-color);
   @include transition(0.4s ease-out);
 
   @media #{$mq-small} {
@@ -334,6 +339,11 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    > div {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   a {
@@ -430,6 +440,30 @@ html {
 
     @media #{$mq-small} {
       width: 35px !important;
+    }
+  }
+}
+
+.theme_switcher {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-text-menu);
+  text-align: center;
+  display: flex;
+  margin-right: 1rem;
+  cursor: pointer;
+
+  i {
+    margin: auto;
+    color: var(--white-text-color);
+    display: none;
+    opacity: 0;
+    @include transition(opacity, 200ms, ease-in-out);
+
+    &.active {
+      display: block;
+      opacity: 1;
     }
   }
 }
@@ -899,8 +933,8 @@ $hobbiesBannerHeight: 12rem;
   margin-top: calc(-#{$hobbiesBannerHeight} /2);
   width: 100%;
   padding: 4rem 1rem;
-  background-color: #111111c2;
-  box-shadow: 0 0 50px 10px #000, 0 0 50px #000;
+  background-color: var(--banner-color);
+  box-shadow: 0 0 50px 10px var(--banner-shadow-color), 0 0 50px var(--banner-shadow-color);
   display: flex;
   justify-content: space-evenly;
 }
@@ -969,7 +1003,7 @@ $projectTextSize: 1.2rem;
 }
 
 .mark {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, #5ae1b4 90%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 80%, var(--seconday-color) 90%);
 }
 
 //! Contact
